@@ -1,19 +1,28 @@
 /* Styling the Body element i.e. Color, 
         Font, Alignment */ 
         body {
-          background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+        background: linear-gradient(to top, #7f00ff, #e100ff);
+        /* background: -webkit-linear-gradient(to top, #12FFF7, #B3FFAB);  Chrome 10-25, Safari 5.1-6 */
+        /* background: linear-gradient(to top, #12FFF7, #B3FFAB); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            
           font-family: Verdana;
           text-align: center;
       }
 
       /* Styling the Form (Color, Padding, Shadow) */
+      h1{
+        font-family: 'Times New Roman', Times, serif;
+      }
       form {
-          background-color: #fff;
+          /* background-color: #fff; */
+          /* /* background: linear-gradient(to top, #c9ffbf, #ffafbd); */
+          background:#ffffff;
           border-radius: 10px;
           max-width: 500px;
           margin: 50px auto;
           padding: 30px 20px;
-          box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+          /* box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5); */
+          box-shadow: 10px 10px 10px 10px rgb(44, 0, 46);
       }
 
       /* Styling form-control Class */
@@ -48,12 +57,20 @@
           display: inline-block;
           width: auto;
       }
+      #Qrcode{
+        height: 200px;
+        width: 200px;
+      }
 
       /* Styling Button */
       button {
-          background-color: #05c46b;
+          /* background-color: #05c46b;
+           */
+           color: aliceblue;
+          
+          background: #2f00ff;
           border: 1px solid #777;
-          border-radius: 2px;
+          border-radius: 10px;
           font-family: inherit;
           font-size: 21px;
           display: block;
