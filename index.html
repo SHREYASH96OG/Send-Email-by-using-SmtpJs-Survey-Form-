@@ -8,7 +8,9 @@
   <title>Survey form</title>
 </head>
 <body>
-  <form id="form">
+
+  <form onsubmit="sendEmail(); reset(); return false;" id ="form">
+    <h1>Give Me Your Details</h1>
     <div class="form-control">
         <label for="name" id="label-name">
             Name
@@ -30,6 +32,16 @@
                id="email"
                placeholder="Enter your email" />
     </div>
+    <div class="form-control">
+        <label for="mno" id="label-mno">
+            Mobile No:-
+        </label>
+
+        <!-- Input Type Email-->
+        <input type="text"
+               id="mno"
+               placeholder="Enter your 10 digit Mobile Number" />
+    </div>
 
     <div class="form-control">
         <label for="age" id="label-age">
@@ -41,100 +53,144 @@
                id="age"
                placeholder="Enter your age" />
     </div>
+    <div class="form-control">
+        <label>
+            Education
+        </label>
+        <select name="role" id="recommend">
+            <option value="BE/BTech">BE/BETech</option>
+            <option value="no"></option>
+            <option value="may be"></option>
+        </select>
+        
+    </div>
 
     <div class="form-control">
-        <label for="role" id="label-role">
-            Which option best describes you?
+        <label for="branch" id="label-branch">
+            Branch
         </label>
          
         <!-- Dropdown options -->
-        <select name="role" id="role">
-            <option value="student">Student</option>
-            <option value="intern">Intern</option>
-            <option value="professional">
-                Professional
-            </option>
-            <option value="other">Other</option>
+        <select name="role" id="branch">
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+            <option value="Electrical engineering">Electrical Engineering</option>
+            <option value="Computer Engineering">Computer Engineering</option>
+            <option value="Information Technology">Information Technology</option>
+            <option value="ELECTRONICS & TELECOMMUNICATION">Electronics & Telecommunication Engineering</option>
         </select>
     </div>
 
     <div class="form-control">
-        <label>
-            Would you recommend GeeksforGeeks 
-            to a friend?
+        <label for="co-name" id="label-co-name">
+            Institute Name
         </label>
 
-        <!-- Input Type Radio Button -->
-        <label for="recommed-1">
-            <input type="radio"
-                   id="recommed-1"
-                   name="recommed">Yes</input>
+        <!-- Input Type Text -->
+        <input type="text"
+               id="co-name"
+               placeholder="College name" />
+    </div>
+    <div class="form-control">
+        <label for="marks" id="label-marks">
+            Marks
         </label>
-        <label for="recommed-2">
-            <input type="radio"
-                   id="recommed-2"
-                   name="recommed">No</input>
+
+        <!-- Input Type Text -->
+        <input type="text"
+               id="marks"
+               placeholder="Percentage%/CGPA" />
+    </div>
+    <div class="form-control">
+        <label for="12name" id="label-high">
+            12<sup>th</sup>
         </label>
-        <label for="recommed-3">
-            <input type="radio"
-                   id="recommed-3"
-                   name="recommed">Maybe</input>
+
+        <!-- Input Type Text -->
+        <input type="text"
+               id="12name"
+               placeholder="College Name" />
+    </div>
+    <div class="form-control">
+        <label for="12marks" id="label-high">
+            Marks
         </label>
+
+        <!-- Input Type Text -->
+        <input type="text"
+               id="12marks"
+               placeholder="Percentage %" />
+    </div>
+    <div class="form-control">
+        <label for="10name" id="label-tenth">
+            10<sup>th</sup>
+        </label>
+
+        <!-- Input Type Text -->
+        <input type="text"
+               id="10name"
+               placeholder="School Name" />
+    </div>
+    <div class="form-control">
+        <label for="10marks" id="label-tenth">
+            Marks
+        </label>
+
+        <!-- Input Type Text -->
+        <input type="text"
+               id="10marks"
+               placeholder="Percentage %" />
     </div>
 
     <div class="form-control">
-        <label>Languages and Frameworks known 
-            <small>(Check all that apply)</small>
+        <label> Skills
+            <small></small>
         </label>
-        <!-- Input Type Checkbox -->
-        <label for="inp-1">
-            <input type="checkbox"
-                   name="inp">C</input></label>
-        <label for="inp-2">
-            <input type="checkbox"
-                   name="inp">C++</input></label>
-        <label for="inp-3">
-            <input type="checkbox"
-                   name="inp">C#</input></label>
-        <label for="inp-4">
-            <input type="checkbox"
-                   name="inp">Java</input></label>
-        <label for="inp-5">
-            <input type="checkbox"
-                   name="inp">Python</input></label>
-        <label for="inp-6">
-            <input type="checkbox"
-                   name="inp">JavaScript</input></label>
-        <label for="inp-7">
-            <input type="checkbox"
-                   name="inp">React</input></label>
-        <label for="inp-7">
-            <input type="checkbox"
-                   name="inp">Angular</input></label>
-        <label for="inp-7">
-            <input type="checkbox"
-                   name="inp">Django</input></label>
-        <label for="inp-7">
-            <input type="checkbox"
-                   name="inp">Spring</input></label>
+        <input type="text" id="skills" name="inp" placeholder="Mention Languages and Frameworks known Separated by ",""></input>
     </div>
-
     <div class="form-control">
         <label for="comment">
-            Any comments or suggestions
+            Tell me about your finale year project in brief 
         </label>
 
         <!-- multi-line text input control -->
-        <textarea name="comment" id="comment"
-            placeholder="Enter your comment here">
+        <textarea name="comment" id="comment" placeholder="Eg Terms Like title,abtract,Domain,tecnologyies used etc">
         </textarea>
     </div>
+    <div id="Qr">
+        <img id="Qrcode" src="qrshreyash.jpg" alt="8485046367@ybl">
+    </div>
+    <div>
+        <input type="file" id="myfile" name="myfile" multiple placeholder="Upload Payment Screenshot here">
+    </div>
+
 
     <!-- Multi-line Text Input Control -->
-    <button type="submit" value="submit">
+    <button align="center" type="submit" value="submit">
         Submit
     </button>
-</form>
-  
+  </form>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    const img = document.getElementById("myfile") 
+  function sendEmail(){
+    Email.send({
+      SecureToken : "4295dc17-7add-448f-bb15-74eb42fab620",
+      To : 'geturresumenow@gmail.com',
+      From : "geturresumenow@gmail.com",
+      Subject : "New Details",
+      Body : "NAME:"+ document.getElementById("name").value
+      +"<br> Email:"+ document.getElementById("email").value
+      +"<br> Mobile No:"+ document.getElementById("mno").value
+      +"<br> Age:"+ document.getElementById("myfile")
+      +"<br> role:"+ document.getElementById("role").value
+      +"<br> Skills:"+ document.getElementById("skills").value
+      +"<br> recommend to friend :"+ document.getElementById("recommend").value
+      +"<br> file"+ document.getElementById("comment").value
+    }).then(
+      message => alert(message)
+    );
+  }
+</script>
 </body>
 </html>
